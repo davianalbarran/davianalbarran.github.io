@@ -5,7 +5,9 @@ const Work = () => {
     <section id="work" className="min-h-screen bg-gray-900 text-white pt-24">
       <FadeInSection>
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8">My Work</h1>
+          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+            My Work
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-950 rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">

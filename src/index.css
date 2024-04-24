@@ -14,3 +14,7 @@
     opacity: 1;
     transform: none;
 }
+
+.mobile-menu li {
+    margin-left: 1rem;
+}

@@ -5,7 +5,9 @@ const Contact = () => {
     <section id="contact" className="min-h-screen bg-gray-900 text-white pt-24">
       <FadeInSection>
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8">Contact Me</h1>
+          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+            Contact Me
+          </h1>
           <p className="text-xl mb-8">
             If you have any questions, feedback, or would like to discuss a
             potential project, feel free to reach out to me using the contact

@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleResumeDownload = () => {
     const resumeURL = "/Davian Albarran - Software Engineer.pdf";
     const link = document.createElement("a");
     link.href = resumeURL;
     link.download = "Davian_Albarran_Resume.pdf";
     link.click();
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -21,7 +28,37 @@ const Navbar = () => {
           DVN
         </Link>
       </div>
-      <ul className="flex items-center space-x-4">
+      <div className="md:hidden">
+        <button
+          onClick={toggleMobileMenu}
+          className="text-white focus:outline-none"
+        >
+          <svg
+            className="h-6 w-6 fill-current"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isMobileMenuOpen ? (
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M19.293 4.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L21.586 10l-3.293-3.293a1 1 0 010-1.414z"
+              />
+            ) : (
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+      <ul
+        className={`${
+          isMobileMenuOpen ? "block md:hidden mobile-menu" : "hidden"
+        } md:flex items-center space-x-4`}
+      >
         <li>
           <Link
             to="about"
