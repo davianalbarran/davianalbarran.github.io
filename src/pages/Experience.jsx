@@ -12,34 +12,57 @@ const Experience = () => {
             Experience
           </h1>
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">Software Engineer</h2>
-            <p className="text-lg mb-2">ABC Company</p>
-            <p className="text-gray-500">June 2020 - Present</p>
-            <ul className="list-disc pl-8">
+            <h2 className="text-2xl font-bold mb-2">
+              Applied Software Engineer Intern
+            </h2>
+            <p className="text-lg mb-2">MITRE Corp</p>
+            <p className="text-gray-500">May 2022 - August 2023</p>
+            <ul className="list-disc text-lg pl-8">
               <li>
-                Developed and maintained web applications using React and
-                Node.js
+                Supported a web development team as a Full Stack Engineer by
+                completing tickets on a Kanban Board for each Sprint working
+                under an Agile philosophy
               </li>
               <li>
-                Collaborated with cross-functional teams to deliver high-quality
-                software
+                Utilized HTML, CSS, JavaScript+jQuery for creating views and
+                Node.js + Express.js for backend functionality, as well as
+                working with our MongoDB, MySQL, and AWS S3 databases
               </li>
-              <li>Implemented responsive and accessible user interfaces</li>
+              <li>
+                Transferred from full time to part time through the school year
+              </li>
             </ul>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-2">
-              Frontend Developer Intern
-            </h2>
-            <p className="text-lg mb-2">XYZ Startup</p>
-            <p className="text-gray-500">January 2019 - May 2019</p>
-            <ul className="list-disc pl-8">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-2">Private CS Tutor</h2>
+            <p className="text-lg mb-2">Self-Employment</p>
+            <p className="text-gray-500">January 2024 - May 2024</p>
+            <ul className="list-disc text-lg pl-8">
               <li>
-                Assisted in the development of a web application using React and
-                Redux
+                Assisted students in designing and developing their Senior
+                Capstone projects
               </li>
               <li>
-                Implemented UI components and optimized application performance
+                Worked with various technologies depending on the student&apos;s
+                project, for example: GraphQL, React, Python&apos;s Flask
+                Library, and even some PHP work with the CodeIgniter framework.
+              </li>
+            </ul>
+          </div>
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-2">
+              Res Life Community Assistant
+            </h2>
+            <p className="text-lg mb-2">Monmouth University Residential Life</p>
+            <p className="text-gray-500">September 2023 - May 2024</p>
+            <ul className="list-disc text-lg pl-8">
+              <li>
+                In charge of supporting ~200 residents and enforcing the housing
+                rules in a team of 4
+              </li>
+              <li>
+                Developed 14 programs and weekly newsletters to foster community
+                and diversity in our housing complex
               </li>
             </ul>
           </div>
