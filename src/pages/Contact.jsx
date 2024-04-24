@@ -47,7 +47,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded hover:from-purple-700 hover:to-pink-700"
             >
               Send Message
             </button>
@@ -57,8 +57,8 @@ const Contact = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
-                  className="flex items-center space-x-2 text-blue-500 hover:underline"
+                  href="https://github.com/davianalbarran"
+                  className="flex items-center space-x-2 text-pink-400 hover:underline"
                 >
                   <svg
                     className="w-6 h-6"
@@ -72,8 +72,8 @@ const Contact = () => {
               </li>
               <li>
                 <a
-                  href="#"
-                  className="flex items-center space-x-2 text-blue-500 hover:underline"
+                  href="https://www.linkedin.com/in/davian-albarran-abb372241/"
+                  className="flex items-center space-x-2 text-pink-400 hover:underline"
                 >
                   <svg
                     className="w-6 h-6"
@@ -88,7 +88,7 @@ const Contact = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center space-x-2 text-blue-500 hover:underline"
+                  className="flex items-center space-x-2 text-pink-400 hover:underline"
                 >
                   <svg
                     className="w-6 h-6"

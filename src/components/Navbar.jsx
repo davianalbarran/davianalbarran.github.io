@@ -1,6 +1,14 @@
 import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const handleResumeDownload = () => {
+    const resumeURL = "/Davian Albarran - Software Engineer.pdf";
+    const link = document.createElement("a");
+    link.href = resumeURL;
+    link.download = "Davian_Albarran_Resume.pdf";
+    link.click();
+  };
+
   return (
     <nav className="text-white fixed top-0 left-0 right-0 p-4 flex justify-between items-center z-10 bg-gray-900">
       <div className="text-2xl font-bold group">
@@ -13,7 +21,7 @@ const Navbar = () => {
           DVN
         </Link>
       </div>
-      <ul className="flex space-x-4">
+      <ul className="flex items-center space-x-4">
         <li>
           <Link
             to="about"
@@ -55,14 +63,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link
-            to="resume"
-            smooth={true}
-            duration={500}
+          <button
+            onClick={handleResumeDownload}
             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded hover:from-purple-700 hover:to-pink-700"
           >
             Resume
-          </Link>
+          </button>
         </li>
       </ul>
     </nav>

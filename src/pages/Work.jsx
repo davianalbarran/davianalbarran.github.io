@@ -7,21 +7,38 @@ const Work = () => {
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold mb-8">My Work</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold mb-4">Project 1</h2>
+            <div className="bg-gray-950 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+                ParkShark
+              </h2>
               <p className="text-lg mb-4">
-                A web application for task management and collaboration.
+                A fully fledged parking management system marketed towards
+                Universities with a RESTful API, custom, patent-pending
+                hardware, and an iOS app. As of May 2024, this project is on the
+                road to become my first entrepreneurial venture with an amazing
+                team that I&apos;m lucky enough to call my friends.
               </p>
-              <a href="#" className="text-blue-500 hover:underline">
+              <a
+                href="https://github.com/MU-ParkShark/ParkSharkAPI"
+                className="text-pink-400 hover:underline"
+              >
                 View Project
               </a>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-bold mb-4">Project 2</h2>
+            <div className="bg-gray-950 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+                AmiStudio
+              </h2>
               <p className="text-lg mb-4">
-                An e-commerce platform built with React and Node.js.
+                A neat little desktop app done mostly to learn Rust and the
+                Tauri framework that allows users to build and nurture their own
+                Tamagotchi-like character with RPG stats. Battle your friends
+                with the Rust powered server I wrote to allow for multiplayer!
               </p>
-              <a href="#" className="text-blue-500 hover:underline">
+              <a
+                href="https://github.com/davianalbarran/amistudio"
+                className="text-pink-400 hover:underline"
+              >
                 View Project
               </a>
             </div>

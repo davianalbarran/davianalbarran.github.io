@@ -13,9 +13,11 @@ const About = () => {
             Node.js, Rust, C, Python, AWS EC2, MySQL, and MongoDB.
           </p>
           <p className="text-xl mb-8">
-            When I&apos;m not coding, you can find me exploring new hiking
-            trails, trying out new recipes in the kitchen, or getting lost in a
-            good book.
+            When I&apos;m not coding, you can find me trying new restaurants
+            with my girlfriend, designing cool game ideas, or learning more
+            about whatever my mind decided to fixate on currently! Right now
+            that would be reading about the science of sleeping and also how to
+            effectively create a startup.
           </p>
           <p className="text-xl">
             Feel free to reach out if you&apos;d like to connect or collaborate

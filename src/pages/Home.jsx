@@ -1,4 +1,5 @@
 import FadeInSection from "../components/FadeInSection";
+import MouseEffect from "../components/MouseEffect";
 
 const Home = () => {
   return (
@@ -6,6 +7,7 @@ const Home = () => {
       id="home"
       className="min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center relative overflow-hidden pt-24"
     >
+      <MouseEffect />
       <FadeInSection>
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4 animate-fade-in-up">
