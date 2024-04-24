@@ -42,6 +42,44 @@ const Work = () => {
                 View Project
               </a>
             </div>
+            <div className="bg-gray-950 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+                Python Automation Script
+              </h2>
+              <p className="text-lg mb-4">
+                In my tenure as a Community Assitant at Monmouth University, my
+                fellow CAs and I were tasked with the tedious job of inputting
+                data from genuine conversations with our residents into our
+                school&apos;s online form handler. I wrote a Python script that
+                automated the process of inputting each individual conversations
+                details, saving us hours of work.
+              </p>
+              <a
+                href="https://github.com/davianalbarran/intentional_conversations"
+                className="text-pink-400 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+            <div className="bg-gray-950 rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+                Pong
+              </h2>
+              <p className="text-lg mb-4">
+                I, like many others, have always loved playing games and as a
+                child, I dreamed of creating a game studio. As I&apos;ve aged, I
+                realized that I could still make games even if creating a game
+                studio is not really my life goal, just on a smaller scale. To
+                get as low level as possible, I decided to use my C knowledge to
+                use the Raylib framework and make a very basic pong game.
+              </p>
+              <a
+                href="https://github.com/davianalbarran/pong-raylib"
+                className="text-pink-400 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
           </div>
         </div>
       </FadeInSection>
