@@ -69,9 +69,9 @@ const Work = () => {
                 I, like many others, have always loved playing games and as a
                 child, I dreamed of creating a game studio. As I&apos;ve aged, I
                 realized that I could still make games even if creating a game
-                studio is not really my life goal, just on a smaller scale. To
-                get as low level as possible, I decided to use my C knowledge to
-                use the Raylib framework and make a very basic pong game.
+                studio is not really my life goal. To get as low level as
+                possible, I decided to use my C knowledge to use the Raylib
+                framework and make a very basic pong game.
               </p>
               <a
                 href="https://github.com/davianalbarran/pong-raylib"
