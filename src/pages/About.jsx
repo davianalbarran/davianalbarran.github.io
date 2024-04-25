@@ -1,6 +1,63 @@
+import { useState } from "react";
 import FadeInSection from "../components/FadeInSection";
 
 const About = () => {
+  const [currentCard, setCurrentCard] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const cards = [
+    {
+      content: (
+        <>
+          <h3 className="font-bold text-pink-500">Intro</h3>
+          <div>
+            <p>
+              Hi there! I&apos;m a passionate, Latino-American software engineer
+              with a love for building amazing software systems. I have
+              experience in a variety of technologies, including React (what
+              this site is written in), Node.js, Rust, C, Python, AWS EC2,
+              MySQL, and MongoDB.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      content: (
+        <>
+          <h3 className="font-bold text-pink-500">Hobbies</h3>
+          <p>
+            When I&apos;m not coding, you can find me trying new restaurants
+            with my girlfriend, designing cool game ideas, or learning more
+            about whatever my mind decided to fixate on currently! For those
+            interested, right now that would be reading about the science of
+            sleeping and also how to effectively create and run a startup.
+          </p>
+        </>
+      ),
+    },
+    {
+      content: (
+        <>
+          <h3 className="font-bold text-pink-500">Let&apos;s Talk!</h3>
+          <p>
+            Feel free to reach out if you&apos;d like to connect or collaborate
+            on a project together! I&apos;m always looking for new ventures and
+            have an entrepreneurial spirit.
+          </p>
+        </>
+      ),
+    },
+  ];
+
+  const nextCard = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentCard((prevCard) => (prevCard + 1) % cards.length);
+      setIsTransitioning(false);
+    }, 500);
+  };
+
   return (
     <section id="about" className="min-h-screen bg-gray-900 text-white pt-24">
       <FadeInSection>
@@ -9,28 +66,37 @@ const About = () => {
             About Me
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-2xl mb-8">
-                Hi there! I&apos;m a passionate, Latino-American software
-                engineer with a love for building amazing software systems. I
-                have experience in a variety of technologies, including React
-                (what this site is written in), Node.js, Rust, C, Python, AWS
-                EC2, MySQL, and MongoDB.
-              </p>
-              <p className="text-2xl mb-8">
-                When I&apos;m not coding, you can find me trying new restaurants
-                with my girlfriend, designing cool game ideas, or learning more
-                about whatever my mind decided to fixate on currently! For those
-                interested, right now that would be reading about the science of
-                sleeping and also how to effectively create and run a startup.
-              </p>
-              <p className="text-2xl">
-                Feel free to reach out if you&apos;d like to connect or
-                collaborate on a project together! I&apos;m always looking for
-                new ventures and have an entrepreneurial spirit.
-              </p>
+            <div className="relative overflow-hidden content-center">
+              <div
+                className={`bg-gray-800 w-full min-h-96 grid grid-cols-6 rounded-2xl p-6 mb-8 transition-transform duration-500 ease-in-out ${
+                  isTransitioning ? "transform -translate-x-full" : ""
+                }`}
+              >
+                <div className="col-span-5 flex flex-col justify-center text-xl md:text-3xl mb-4">
+                  {cards[currentCard].content}
+                </div>
+                {!isTransitioning && (
+                  <button
+                    className="text-pink-500 hover:text-pink-600 transition-opacity duration-300 justify-self-end"
+                    onClick={nextCard}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                )}
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 w-full h-96">
+            <div className="grid grid-cols-2 gap-4 w-fit h-fit">
               <div className="row-span-2">
                 <img
                   src="/IMG_9388.JPEG"
