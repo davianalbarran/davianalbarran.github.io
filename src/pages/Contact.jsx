@@ -62,13 +62,11 @@ const Contact = () => {
                   href="https://github.com/davianalbarran"
                   className="flex items-center space-x-2 text-pink-400 hover:underline"
                 >
-                  <svg
+                  <img
+                    src="/github-mark-white.svg"
+                    alt="GitHub"
                     className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {/* GitHub icon */}
-                  </svg>
+                  />
                   <span>GitHub</span>
                 </a>
               </li>
@@ -77,29 +75,12 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/davian-albarran-abb372241/"
                   className="flex items-center space-x-2 text-pink-400 hover:underline"
                 >
-                  <svg
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"
+                    alt="LinkedIn"
                     className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {/* LinkedIn icon */}
-                  </svg>
+                  />
                   <span>LinkedIn</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="flex items-center space-x-2 text-pink-400 hover:underline"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {/* Twitter icon */}
-                  </svg>
-                  <span>Twitter</span>
                 </a>
               </li>
             </ul>
