@@ -23,7 +23,7 @@ const Education = () => {
                   Double Minor in Mathematics and Computer Science
                 </p>
               </div>
-              <div className="text-right">
+              <div className="md:text-right">
                 <p className="text-lg mb-1">Location: West Long Branch, NJ</p>
                 <p className="text-lg mb-1">Cumulative GPA: 3.72</p>
                 <p className="text-lg">Graduation Date: May 2024</p>
