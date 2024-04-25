@@ -43,7 +43,7 @@ const Education = () => {
                 <p className="text-base text-gray-300">Spring 2023</p>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
-                <h3 className="text-xl font-bold mb-2">Dean's List</h3>
+                <h3 className="text-xl font-bold mb-2">Dean&apos;s List</h3>
                 <p className="text-lg">Recognized for academic excellence</p>
                 <p className="text-base text-gray-300">2022-2023</p>
               </div>
