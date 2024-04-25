@@ -12,7 +12,9 @@ const Education = () => {
             Education
           </h1>
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Education Info</h2>
+            <h2 className="text-2xl text-center underline font-bold mb-4">
+              Education Info
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-2">Monmouth University</h3>
@@ -21,7 +23,7 @@ const Education = () => {
                   Double Minor in Mathematics and Computer Science
                 </p>
               </div>
-              <div>
+              <div className="text-right">
                 <p className="text-lg mb-1">Location: West Long Branch, NJ</p>
                 <p className="text-lg mb-1">Cumulative GPA: 3.72</p>
                 <p className="text-lg">Graduation Date: May 2024</p>
@@ -29,8 +31,32 @@ const Education = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-4">Academic Awards</h2>
-            {/* Add your academic awards content here */}
+            <h2 className="text-2xl text-center underline font-bold mb-4">
+              Academic Awards
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
+                <h3 className="text-xl font-bold mb-2">Physics Award</h3>
+                <p className="text-lg">
+                  Outstanding achievements in physics courses
+                </p>
+                <p className="text-base text-gray-300">Spring 2023</p>
+              </div>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
+                <h3 className="text-xl font-bold mb-2">Dean's List</h3>
+                <p className="text-lg">Recognized for academic excellence</p>
+                <p className="text-base text-gray-300">2022-2023</p>
+              </div>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
+                <h3 className="text-xl font-bold mb-2">
+                  Academic Excellence Award
+                </h3>
+                <p className="text-lg">
+                  Computer Science and Software Engineering Department
+                </p>
+                <p className="text-base text-gray-300">2023</p>
+              </div>
+            </div>
           </div>
         </div>
       </FadeInSection>
