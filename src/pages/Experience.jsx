@@ -51,7 +51,7 @@ const Experience = () => {
           </div>
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">
-              Res Life Community Assistant
+              Residential Life Community Assistant
             </h2>
             <p className="text-lg mb-2">Monmouth University Residential Life</p>
             <p className="text-gray-500">September 2023 - May 2024</p>
