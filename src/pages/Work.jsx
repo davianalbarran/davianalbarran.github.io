@@ -34,8 +34,9 @@ const Work = () => {
               <p className="text-lg mb-4">
                 A neat little desktop app done mostly to learn Rust and the
                 Tauri framework that allows users to build and nurture their own
-                Tamagotchi-like character with RPG stats. Battle your friends
-                with the Rust powered server I wrote to allow for multiplayer!
+                Tamagotchi-like character with RPG stats. The Rust-powered
+                server allows for multiplayer gameplay so you can battle your
+                friends!
               </p>
               <a
                 href="https://github.com/davianalbarran/amistudio"
@@ -53,8 +54,8 @@ const Work = () => {
                 fellow CAs and I were tasked with the tedious job of inputting
                 data from genuine conversations with our residents into our
                 school&apos;s online form handler. I wrote a Python script that
-                automated the process of inputting each individual conversations
-                details, saving us hours of work.
+                automated the process of inputting each individual
+                conversation&apos;s details, saving us hours of work.
               </p>
               <a
                 href="https://github.com/davianalbarran/intentional_conversations"
@@ -69,11 +70,11 @@ const Work = () => {
               </h2>
               <p className="text-lg mb-4">
                 I, like many others, have always loved playing games and as a
-                child, I dreamed of creating a game studio. As I&apos;ve aged, I
-                realized that I could still make games even if creating a game
-                studio is not really my life goal. To get as low level as
-                possible, I decided to use my C knowledge to use the Raylib
-                framework and make a very basic pong game.
+                child, I dreamed of founding a game studio. As I&apos;ve aged, I
+                realized that I could still make games as a hobby even if
+                starting my own studio wasn&apos;t in the cards. To get as
+                low-level as possible, I decided to utilize my C knowledge and
+                use the Raylib framework to make a very basic pong game.
               </p>
               <a
                 href="https://github.com/davianalbarran/pong-raylib"

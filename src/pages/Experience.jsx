@@ -44,8 +44,8 @@ const Experience = () => {
               </li>
               <li>
                 Worked with various technologies depending on the student&apos;s
-                project, for example: GraphQL, React, Python&apos;s Flask
-                Library, and even some PHP work with the CodeIgniter framework.
+                stack, for example: GraphQL, React, Python&apos;s Flask Library,
+                and some PHP work with the CodeIgniter framework
               </li>
             </ul>
           </div>
@@ -56,13 +56,15 @@ const Experience = () => {
             <p className="text-lg mb-2">Monmouth University Residential Life</p>
             <p className="text-gray-500">September 2023 - May 2024</p>
             <ul className="list-disc text-lg pl-8">
+              <li>In charge of supporting ~200 residents in a team of 4</li>
               <li>
-                In charge of supporting ~200 residents and enforcing the housing
-                rules in a team of 4
+                Daily responsibilities included: assisting residents with issues
+                in their apartments, making critical decisions in emergency
+                situations, and enforcing university policies
               </li>
               <li>
                 Developed 14 programs and weekly newsletters to foster community
-                and diversity in our housing complex
+                and diversity in our housing complex per semester
               </li>
             </ul>
           </div>
