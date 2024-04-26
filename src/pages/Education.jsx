@@ -44,7 +44,7 @@ const Education = () => {
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
                 <h3 className="text-xl font-bold mb-2">Dean&apos;s List</h3>
-                <p className="text-lg">Recognized for acheiving high grades.</p>
+                <p className="text-lg">Recognized for acheiving high grades</p>
                 <p className="text-base text-gray-300">Date Earned: May 2023</p>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
@@ -53,7 +53,7 @@ const Education = () => {
                 </h3>
                 <p className="text-lg">
                   For maintaining a high GPA throughout my four year tenure at
-                  Monmouth University.
+                  Monmouth University
                 </p>
                 <p className="text-base text-gray-300">
                   Date Earned: April 2024

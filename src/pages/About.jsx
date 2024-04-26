@@ -42,8 +42,8 @@ const About = () => {
           <h3 className="font-bold text-pink-500">Let&apos;s Talk!</h3>
           <p>
             Feel free to reach out if you&apos;d like to connect or collaborate
-            on a project together! I&apos;m always looking for new ventures and
-            have an entrepreneurial spirit.
+            on a project together! I have an entrepreneurial spirit and am
+            always looking for new ventures.
           </p>
         </>
       ),
