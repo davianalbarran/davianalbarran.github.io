@@ -15,45 +15,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const requestPayload = {
-      version: "2.0",
-      routeKey: "$default",
-      rawPath: "/my/path",
-      rawQueryString: "",
-      cookies: [],
-      headers: {},
-      queryStringParameters: null,
-      requestContext: {
-        accountId: "381492141901",
-        apiId: "73hv2pd3wqwoujkuauf5rlkfe0gvuhc",
-        authentication: null,
-        authorizer: null,
-        domainName:
-          "73hv2pd3wqwoujkuauf5rlkfe0gvuhc.lambda-url.us-west-2.on.aws",
-        domainPrefix: "73hv2pd3wqwoujkuauf5rlkfe0gvuhc",
-        http: {
-          method: "POST",
-          path: "/my/path",
-          protocol: "HTTP/1.1",
-          sourceIp: "",
-          userAgent: "",
-        },
-        requestId: "",
-        routeKey: "$default",
-        stage: "$default",
-        time: new Date().toISOString(),
-        timeEpoch: Date.now(),
-      },
-      body: {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
-      pathParameters: null,
-      isBase64Encoded: false,
-      stageVariables: null,
-    };
-
     try {
       const response = await fetch(
         "https://o73hv2pd3wqwoujkuauf5rlkfe0gvuhc.lambda-url.us-east-2.on.aws/",
