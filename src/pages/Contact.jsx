@@ -1,6 +1,90 @@
+import { useState } from "react";
 import FadeInSection from "../components/FadeInSection";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const requestPayload = {
+      version: "2.0",
+      routeKey: "$default",
+      rawPath: "/my/path",
+      rawQueryString: "",
+      cookies: [],
+      headers: {},
+      queryStringParameters: null,
+      requestContext: {
+        accountId: "381492141901",
+        apiId: "73hv2pd3wqwoujkuauf5rlkfe0gvuhc",
+        authentication: null,
+        authorizer: null,
+        domainName:
+          "73hv2pd3wqwoujkuauf5rlkfe0gvuhc.lambda-url.us-west-2.on.aws",
+        domainPrefix: "73hv2pd3wqwoujkuauf5rlkfe0gvuhc",
+        http: {
+          method: "POST",
+          path: "/my/path",
+          protocol: "HTTP/1.1",
+          sourceIp: "",
+          userAgent: "",
+        },
+        requestId: "",
+        routeKey: "$default",
+        stage: "$default",
+        time: new Date().toISOString(),
+        timeEpoch: Date.now(),
+      },
+      body: {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      pathParameters: null,
+      isBase64Encoded: false,
+      stageVariables: null,
+    };
+
+    try {
+      const response = await fetch(
+        "https://o73hv2pd3wqwoujkuauf5rlkfe0gvuhc.lambda-url.us-east-2.on.aws/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            Connection: "keep-alive",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          }),
+        },
+      );
+
+      if (response.ok) {
+        alert("Email sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="min-h-screen bg-gray-900 text-white pt-24">
       <FadeInSection>
@@ -13,7 +97,7 @@ const Contact = () => {
             potential project, feel free to reach out to me using the contact
             form below or through the provided social links.
           </p>
-          <form className="mb-8">
+          <form className="mb-8" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="block mb-2">
                 Name
@@ -23,6 +107,8 @@ const Contact = () => {
                 id="name"
                 className="bg-gray-950 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -34,6 +120,8 @@ const Contact = () => {
                 id="email"
                 className="bg-gray-950 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -45,6 +133,8 @@ const Contact = () => {
                 rows="4"
                 className="bg-gray-950 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
             <button
