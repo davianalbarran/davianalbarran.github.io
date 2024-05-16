@@ -15,8 +15,8 @@ const About = () => {
               Hi there! I&apos;m a passionate, Latino-American software engineer
               with a love for building amazing software systems. I have
               experience in a variety of technologies, including React (what
-              this site is written in), Node.js, Rust, C, Python, AWS EC2,
-              MySQL, and MongoDB.
+              this site is written in), Node.js, GoLang, C, Swift, Python, Rust,
+              AWS EC2 and Lambda, MySQL, and MongoDB.
             </p>
           </div>
         </>
