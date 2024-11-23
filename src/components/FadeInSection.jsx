@@ -3,21 +3,33 @@ import PropTypes from "prop-types";
 
 const FadeInSection = ({ children }) => {
   const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
+  const domRef = useRef(null);
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(domRef.current);
-        }
+    const currentElement = domRef.current;
+
+    if (currentElement) {
+      observerRef.current = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            if (observerRef.current && currentElement) {
+              observerRef.current.unobserve(currentElement);
+            }
+          }
+        });
       });
-    });
 
-    observer.observe(domRef.current);
+      observerRef.current.observe(currentElement);
+    }
 
-    return () => observer.unobserve(domRef.current);
+    return () => {
+      if (observerRef.current && currentElement) {
+        observerRef.current.unobserve(currentElement);
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 
   return (
