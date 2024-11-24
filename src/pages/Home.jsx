@@ -28,13 +28,13 @@ const Home = () => {
             <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
               exceptional
             </span>{" "}
-            software systems.
+            physical and virtual systems.
             <br />
             Currently, I&apos;m focused on building{" "}
             <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
               problem-solving
             </span>{" "}
-            software solutions that benefit the{" "}
+            solutions that benefit the{" "}
             <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
               world
             </span>{" "}

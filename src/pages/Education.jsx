@@ -25,7 +25,7 @@ const Education = () => {
               </div>
               <div className="md:text-right">
                 <p className="text-lg mb-1">West Long Branch, NJ</p>
-                <p className="text-lg mb-1">Cumulative GPA: 3.72</p>
+                <p className="text-lg mb-1">Cumulative GPA: 3.74</p>
                 <p className="text-lg">Graduation Date: May 2024</p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Education = () => {
                 <p className="text-lg">
                   For outstanding achievements in physics courses
                 </p>
-                <p className="text-base text-gray-300">Data Earned: May 2023</p>
+                <p className="text-base text-gray-300">Date Earned: May 2023</p>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 hover:from-purple-500 hover:to-pink-500">
                 <h3 className="text-xl font-bold mb-2">Dean&apos;s List</h3>

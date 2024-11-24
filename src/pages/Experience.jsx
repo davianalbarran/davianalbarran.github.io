@@ -13,23 +13,20 @@ const Experience = () => {
           </h1>
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">
-              Applied Software Engineer Intern
+              Associate Software Engineer
             </h2>
             <p className="text-lg mb-2">MITRE Corp</p>
-            <p className="text-gray-500">May 2022 - August 2023</p>
+            <p className="text-gray-500">July 2024 - Present</p>
             <ul className="list-disc text-lg pl-8">
               <li>
-                Supported a web development team as a Full Stack Engineer by
-                completing tickets on a Kanban Board for each Sprint working
-                under an Agile philosophy
+                Supporting applications development for systems involving signal processing,
+                sensor fusion, and asynchronous, distributed communication.
               </li>
               <li>
-                Utilized HTML, CSS, JavaScript+jQuery for creating views and
-                Node.js + Express.js for backend functionality, as well as
-                working with our MongoDB, MySQL, and AWS S3 databases
+                Utilizing Java to develop application functionality.
               </li>
               <li>
-                Transferred from full time to part time through the school year
+                Collaborating with a large distributed team on niche use cases.
               </li>
             </ul>
           </div>

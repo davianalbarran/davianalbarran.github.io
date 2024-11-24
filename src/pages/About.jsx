@@ -28,10 +28,11 @@ const About = () => {
           <h3 className="font-bold text-pink-500">Hobbies</h3>
           <p>
             When I&apos;m not coding, you can find me trying new restaurants
-            with my girlfriend, designing cool game ideas, or learning more
+            with my girlfriend, reading about space and physics, or learning more
             about whatever my mind decided to fixate on currently! For those
-            interested, right now that would be reading about the science of
-            sleeping and also how to effectively create and run a startup.
+            interested, right now that would be reading the Feynman lectures on Physics
+            and gaining an understanding of Deep Learning, which is fitting considering 
+            this current AI revolution we&apos;re going through.
           </p>
         </>
       ),
@@ -42,7 +43,7 @@ const About = () => {
           <h3 className="font-bold text-pink-500">Let&apos;s Talk!</h3>
           <p>
             Feel free to reach out if you&apos;d like to connect or collaborate
-            on a project together! I have an entrepreneurial spirit and am
+            on a project/research together! I have an entrepreneurial spirit and am
             always looking for new ventures.
           </p>
         </>
