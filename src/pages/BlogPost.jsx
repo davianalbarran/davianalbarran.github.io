@@ -52,6 +52,11 @@ const BlogPost = () => {
           content: content.trim(),
           tags: attributes.tags || []
         });
+
+        document.title = `DVN | ${attributes.title}`;
+        return () => {
+          document.title = "DVN | Forever Curious";
+        };
       } catch (error) {
         console.error('Failed to load blog post:', error);
         setError('Failed to load blog post');

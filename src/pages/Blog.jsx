@@ -38,6 +38,11 @@ const Blog = () => {
           .sort((a, b) => new Date(b.date) - new Date(a.date));
 
         setPosts(validPosts);
+
+        document.title = "DVN | Blog";
+        return () => {
+          document.title = "DVN | Forever Curious";
+        };
       } catch (err) {
         console.error('Error loading blog posts:', err);
         setError('Failed to load blog posts');
