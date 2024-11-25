@@ -12,38 +12,10 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch(
-        "https://o73hv2pd3wqwoujkuauf5rlkfe0gvuhc.lambda-url.us-east-2.on.aws/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "*/*",
-            "Accept-Encoding": "gzip, deflate, br",
-            Connection: "keep-alive",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          }),
-        },
-      );
-
-      if (response.ok) {
-        alert("Email sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("Failed to send email. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
-    }
+    const mailtoLink = `mailto:dalbarran.dev@gmail.com?subject=Message from ${formData.name}&body=${encodeURIComponent(formData.message)}%0D%0A%0D%0AFrom: ${formData.email}`;
+    window.location.href = mailtoLink;
   };
 
   return (

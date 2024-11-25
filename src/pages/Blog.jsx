@@ -114,6 +114,11 @@ const Blog = () => {
               ))}
             </div>
           )}
+            <div className="mt-16 text-center">
+            <p className="text-sm text-gray-500 italic">
+              The views and opinions expressed in this blog are my own and do not necessarily reflect the official policy or position of my employer, The MITRE Corporation.
+            </p>
+          </div>
         </div>
       </FadeInSection>
     </section>
