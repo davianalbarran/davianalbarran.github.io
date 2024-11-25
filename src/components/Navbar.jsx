@@ -7,6 +7,10 @@ const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
+  if (isHomePage) {
+    document.title = "DVN | Forever Curious";
+  }
+
   const handleResumeDownload = () => {
     const resumeURL = "/Davian Albarran - Software Engineer.pdf";
     const link = document.createElement("a");
