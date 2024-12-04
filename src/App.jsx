@@ -8,6 +8,7 @@ import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import { HelmetProvider } from 'react-helmet-async';
 
 const App = () => {
   const MainPage = () => (
@@ -22,14 +23,16 @@ const App = () => {
   );
 
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 };
 

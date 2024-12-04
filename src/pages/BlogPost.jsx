@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import FadeInSection from '../components/FadeInSection';
+import SEO from '../components/SEO';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -145,6 +146,13 @@ const BlogPost = () => {
   if (!post) return null;
 
   return (
+  <>
+  <SEO 
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join(', ')}
+        article={true}
+      />
     <section className="min-h-screen bg-gray-900 text-white pt-24">
       <FadeInSection>
         <div className="container mx-auto px-4 py-16 max-w-4xl">
@@ -176,6 +184,7 @@ const BlogPost = () => {
         </div>
       </FadeInSection>
     </section>
+    </>
   );
 };
 
