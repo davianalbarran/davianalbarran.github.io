@@ -1,4 +1,4 @@
-import FadeInSection from "../components/FadeInSection";
+import FadeInSection from "../components/FadeInSection.jsx";
 
 const Experience = () => {
   return (

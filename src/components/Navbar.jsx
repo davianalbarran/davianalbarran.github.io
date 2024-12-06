@@ -1,15 +1,8 @@
 import { useState } from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
-  if (isHomePage) {
-    document.title = "DVN | Forever Curious";
-  }
 
   const handleResumeDownload = () => {
     const resumeURL = "/Davian Albarran - Software Engineer.pdf";
@@ -23,43 +16,18 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Component for navigation items that includes either ScrollLink or RouterLink
-  const NavItem = ({ to, text }) => {
-    if (isHomePage) {
-      return (
-        <ScrollLink
-          to={to}
-          smooth={true}
-          duration={500}
-          className="hover:underline cursor-pointer"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          {text}
-        </ScrollLink>
-      );
-    }
-    return (
-      <RouterLink
-        to={`/#${to}`}
-        className="hover:underline cursor-pointer"
-        onClick={() => setIsMobileMenuOpen(false)}
-      >
-        {text}
-      </RouterLink>
-    );
-  };
-
   return (
     <nav className="text-white fixed top-0 left-0 right-0 p-4 flex justify-between items-center z-10 bg-gray-900">
       <div className="text-2xl font-bold group">
-        <RouterLink
-          to="/"
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
           className="transition-all duration-300 ease-in-out group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent cursor-pointer"
         >
           DVN
-        </RouterLink>
+        </Link>
       </div>
-
       <div className="md:hidden">
         <button
           onClick={toggleMobileMenu}
@@ -86,35 +54,67 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-
       <ul
         className={`${
           isMobileMenuOpen ? "block md:hidden mobile-menu" : "hidden"
         } md:flex items-center space-x-4`}
       >
         <li>
-          <NavItem to="about" text="About" />
-        </li>
-        <li>
-          <NavItem to="education" text="Education" />
-        </li>
-        <li>
-          <NavItem to="experience" text="Experience" />
-        </li>
-        <li>
-          <NavItem to="work" text="Work" />
-        </li>
-        <li>
-          <NavItem to="contact" text="Contact" />
-        </li>
-        <li>
-          <RouterLink
-            to="/blog"
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
             className="hover:underline cursor-pointer"
-            onClick={() => setIsMobileMenuOpen(false)}
           >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="education"
+            smooth={true}
+            duration={500}
+            className="hover:underline cursor-pointer"
+          >
+            Education
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="experience"
+            smooth={true}
+            duration={500}
+            className="hover:underline cursor-pointer"
+          >
+            Experience
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="work"
+            smooth={true}
+            duration={500}
+            className="hover:underline cursor-pointer"
+          >
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="hover:underline cursor-pointer"
+          >
+            Contact
+          </Link>
+        </li>
+        <li>
+          <a
+            href="https://dvnscience.blog"
+            >
             Blog
-          </RouterLink>
+            </a>
         </li>
         <li>
           <button

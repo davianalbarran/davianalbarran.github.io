@@ -1,5 +1,5 @@
-import FadeInSection from "../components/FadeInSection";
-import MouseEffect from "../components/MouseEffect";
+import FadeInSection from "../components/FadeInSection.jsx";
+import MouseEffect from "../components/MouseEffect.jsx";
 
 const Home = () => {
   return (

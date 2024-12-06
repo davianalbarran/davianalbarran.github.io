@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FadeInSection from "../components/FadeInSection";
+import FadeInSection from "../components/FadeInSection.jsx";
 
 const About = () => {
   const [currentCard, setCurrentCard] = useState(0);
