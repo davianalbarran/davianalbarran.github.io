@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleResumeDownload = () => {
-    const resumeURL = "/Davian Albarran - Software Engineer.pdf";
+    const resumeURL = "/Davian Albarran - Software Engineer Public Release.pdf";
     const link = document.createElement("a");
     link.href = resumeURL;
     link.download = "Davian_Albarran_Resume.pdf";
