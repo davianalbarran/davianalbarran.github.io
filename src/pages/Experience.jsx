@@ -1,69 +1,35 @@
 import FadeInSection from "../components/FadeInSection.jsx";
+import { portfolio } from "../data/portfolio.js";
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="min-h-screen bg-gray-900 text-white pt-24"
-    >
+    <section id="experience" className="notebook-section">
       <FadeInSection>
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
-            Experience
-          </h1>
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">
-              Associate Software Engineer
-            </h2>
-            <p className="text-lg mb-2">MITRE Corp</p>
-            <p className="text-gray-500">July 2024 - Present</p>
-            <ul className="list-disc text-lg pl-8">
-              <li>
-                Supporting applications development for systems involving signal processing,
-                sensor fusion, and asynchronous, distributed communication.
-              </li>
-              <li>
-                Utilizing Java to develop application functionality.
-              </li>
-              <li>
-                Collaborating with a large distributed team on niche use cases.
-              </li>
-            </ul>
+        <div className="notebook-section-grid notebook-experience">
+          <div className="notebook-section-title">
+            <span>Experience</span>
+            <h2>Experience log</h2>
+            <p>
+              Roles where product needs, mission context, and software systems
+              had to meet.
+            </p>
           </div>
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">Private CS Tutor</h2>
-            <p className="text-lg mb-2">Self-Employment</p>
-            <p className="text-gray-500">January 2024 - May 2024</p>
-            <ul className="list-disc text-lg pl-8">
-              <li>
-                Assisted students in designing and developing their Senior
-                Capstone projects
-              </li>
-              <li>
-                Worked with various technologies depending on the student&apos;s
-                stack, for example: GraphQL, React, Python&apos;s Flask Library,
-                and some PHP work with the CodeIgniter framework
-              </li>
-            </ul>
-          </div>
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">
-              Residential Life Community Assistant
-            </h2>
-            <p className="text-lg mb-2">Monmouth University Residential Life</p>
-            <p className="text-gray-500">September 2023 - May 2024</p>
-            <ul className="list-disc text-lg pl-8">
-              <li>In charge of supporting ~200 residents in a team of 4</li>
-              <li>
-                Daily responsibilities included: assisting residents with issues
-                in their apartments, making critical decisions in emergency
-                situations, and enforcing university policies
-              </li>
-              <li>
-                Developed 14 programs and weekly newsletters to foster community
-                and diversity in our housing complex per semester
-              </li>
-            </ul>
+          <div className="notebook-log">
+            {portfolio.experience.map((item, index) => (
+              <article key={item.title}>
+                <strong>0{index + 1}</strong>
+                <div>
+                  <span>{item.dates}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.org}</p>
+                </div>
+                <ul>
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </FadeInSection>

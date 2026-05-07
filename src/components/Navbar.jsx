@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { portfolio } from "../data/portfolio.js";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,54 +18,45 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white fixed top-0 left-0 right-0 p-4 flex justify-between items-center z-10 bg-gray-900">
-      <div className="text-2xl font-bold group">
+    <nav className="notebook-nav">
+      <div className="notebook-brand">
         <Link
           to="home"
           smooth={true}
           duration={500}
-          className="transition-all duration-300 ease-in-out group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent cursor-pointer"
+          className="cursor-pointer"
+          aria-label={`${portfolio.name} home`}
         >
-          DVN
+          <span className="notebook-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path className="brand-mark-shell" d="M10 33C10 20.3 20.3 10 33 10h21v21c0 12.7-10.3 23-23 23H10V33Z" />
+              <text className="brand-mark-text" x="31.5" y="39.5">DA</text>
+              <path className="brand-mark-rule" d="M18 45h25" />
+            </svg>
+          </span>
         </Link>
       </div>
-      <div className="md:hidden">
-        <button
-          onClick={toggleMobileMenu}
-          className="text-white focus:outline-none"
-        >
-          <svg
-            className="h-6 w-6 fill-current"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {isMobileMenuOpen ? (
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M19.293 4.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L21.586 10l-3.293-3.293a1 1 0 010-1.414z"
-              />
-            ) : (
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
-              />
-            )}
-          </svg>
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={toggleMobileMenu}
+        className={`notebook-menu-button ${isMobileMenuOpen ? "is-open" : ""}`}
+        aria-expanded={isMobileMenuOpen}
+        aria-label="Toggle navigation"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
       <ul
-        className={`${
-          isMobileMenuOpen ? "block md:hidden mobile-menu" : "hidden"
-        } md:flex items-center space-x-4`}
+        className={`notebook-links ${isMobileMenuOpen ? "is-open" : ""}`}
       >
         <li>
           <Link
             to="about"
             smooth={true}
             duration={500}
-            className="hover:underline cursor-pointer"
+            offset={-88}
+            className="cursor-pointer"
           >
             About
           </Link>
@@ -74,7 +66,8 @@ const Navbar = () => {
             to="education"
             smooth={true}
             duration={500}
-            className="hover:underline cursor-pointer"
+            offset={-88}
+            className="cursor-pointer"
           >
             Education
           </Link>
@@ -84,7 +77,8 @@ const Navbar = () => {
             to="experience"
             smooth={true}
             duration={500}
-            className="hover:underline cursor-pointer"
+            offset={-88}
+            className="cursor-pointer"
           >
             Experience
           </Link>
@@ -94,7 +88,8 @@ const Navbar = () => {
             to="work"
             smooth={true}
             duration={500}
-            className="hover:underline cursor-pointer"
+            offset={-88}
+            className="cursor-pointer"
           >
             Work
           </Link>
@@ -104,22 +99,19 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="hover:underline cursor-pointer"
+            offset={-88}
+            className="cursor-pointer"
           >
             Contact
           </Link>
         </li>
         <li>
-          <a
-            href="https://dvnscience.blog"
-            >
-            Blog
-            </a>
+          <a href={portfolio.links.blog}>Blog</a>
         </li>
         <li>
           <button
             onClick={handleResumeDownload}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded hover:from-purple-700 hover:to-pink-700"
+            className="notebook-resume-button"
           >
             Resume
           </button>
